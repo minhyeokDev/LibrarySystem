@@ -5,13 +5,17 @@ import java.util.List;
 
 public class Library {
 
-    int number;
-
-    Library(int number) {
-        this.number = number;
+    private  List<Book> books;
+    public Library(List<book> books) {
+        this.books = books;
 
     }
-    //List<Book> books = new ArrayList();
+    public static void main(String[] args) {
+        List<Book> books = new ArrayList<>();
 
+        books.add(new Book(1 , true));
+        books.add(new Book(2 , true));
+        books.add(new Book(3 , true));
 
+    }
 }

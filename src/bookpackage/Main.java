@@ -6,17 +6,12 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<Book> books = new ArrayList<>();
-        List<Library> libraries = new ArrayList<>();
-        //libraries.add(new Library(1, true));
-        //libraries.add(new Library(2, true));
-        //libraries.add(new Library(3, true));
 
-        books.add(new Book(1 , true));
-        books.add(new Book(2 , true));
-        books.add(new Book(3 , true));
-
-
+        Library library = new Library(Arrays.asList(
+            new Book("클린코드(Clean Code)"),
+            new Book("객체지향의 사실과 오해"),
+            new Book("테스트 주도 개발(TDD)")
+        ));
         for (; ; ) {
             System.out.println("대여할 책의 번호를 입력하세요.");
             System.out.println("1. 클린코드(Clean code) - " + books.get(0).status());
