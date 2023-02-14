@@ -12,21 +12,22 @@ public class Main {
             new Book("객체지향의 사실과 오해"),
             new Book("테스트 주도 개발(TDD)")
         ));
+
         for (; ; ) {
             System.out.println("대여할 책의 번호를 입력하세요.");
-            System.out.println("1. 클린코드(Clean code) - " + books.get(0).status());
-            System.out.println("2. 객체지향의 사실과 오해 - " + books.get(1).status());
-            System.out.println("3. 테스트 주도 개발(TDD) - " + books.get(2).status());
+            System.out.println(library.getNumber(0) +". " + library.getName(0) + " - " + library.getStatus(0));
+            System.out.println(library.getNumber(1) +". " + library.getName(1) + " - " + library.getStatus(1));
+            System.out.println(library.getNumber(2) +". " + library.getName(2) + " - " + library.getStatus(2));
             int num = scanner.nextInt();
             if (num == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             } else if (num == 1) {
-                books.get(0).BooksLend(num);
+                library.getBorrow(num);
             } else if (num == 2) {
-                books.get(1).BooksLend(num);
+                library.getBorrow(num);
             } else if (num == 3) {
-                books.get(2).BooksLend(num);
+                library.getBorrow(num);
             }
         }
     }

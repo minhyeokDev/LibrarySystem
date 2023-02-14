@@ -5,17 +5,27 @@ import java.util.List;
 
 public class Library {
 
-    private  List<Book> books;
-    public Library(List<book> books) {
+    private List<Book> books;
+
+    public Library(List<Book> books) {
         this.books = books;
-
     }
-    public static void main(String[] args) {
-        List<Book> books = new ArrayList<>();
 
-        books.add(new Book(1 , true));
-        books.add(new Book(2 , true));
-        books.add(new Book(3 , true));
+    int getNumber(int n){
 
+        return books.indexOf(getName(n));
     }
+    String getName(int number){
+        return books.get(number).BookName();
+    }
+
+    String getStatus(int number){
+        return books.get(number).status();
+    }
+
+    boolean getBorrow(int number){
+        int set = number - 1;
+        return books.get(set).BookBorrow();
+    }
+
 }
