@@ -19,10 +19,8 @@ public class Book {
         } else if (this.isBorrowed == true) {
             System.out.println("대여 중인 책은 대여할 수 없습니다.");
             return this.isBorrowed = true; //반납 시스템은 없으므로 false 하고 끝
-        } else { //번호 잘못 입력할때
-            System.out.println("존재하지 않는 도서 입니다.");
-            return true;
         }
+        return true;
     }
 
     String status() { //대여 상태 확인
@@ -33,7 +31,7 @@ public class Book {
         }
     }
 
-    String BookName(){
+    String BookName() {
         return this.name;
     }
 }

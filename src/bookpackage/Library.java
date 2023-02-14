@@ -11,21 +11,23 @@ public class Library {
         this.books = books;
     }
 
-    int getNumber(int n){
-
-        return books.indexOf(getName(n));
+    int getNumber(int n) { //책 번호 출력
+        String name = books.get(n).BookName();
+        System.out.println(name);
+        int number = books.indexOf(name);
+        return number;
     }
-    String getName(int number){
+
+    String getName(int number) { //책 이름 출력
         return books.get(number).BookName();
     }
 
-    String getStatus(int number){
+    String getStatus(int number) { //책 대여 상태 출력
         return books.get(number).status();
     }
 
-    boolean getBorrow(int number){
-        int set = number - 1;
-        return books.get(set).BookBorrow();
+    boolean getBorrow(int number) { // 책 대여시
+        int renumber = number - 1;
+        return books.get(renumber).BookBorrow();
     }
-
 }
