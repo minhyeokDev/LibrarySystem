@@ -14,8 +14,7 @@ public class Library {
 
     int getNumber(int number) { //책 번호 출력 equals 이용?
         String name = books.get(number).BookName();
-        if( name.equals("클린코드(Clean Code)"))
-        {
+        if (name.equals("클린코드(Clean Code)")) {
             return 1;
         } else if (name.equals("객체지향의 사실과 오해")) {
             return 2;
