@@ -32,7 +32,7 @@ public class Main {
             } else if (num == 3) {
                 library.getBorrow(num);
             } else {
-                System.out.println("존재하지 않는 도서 입니다.");
+                System.out.println("존재하지 않는 도서 입니다. 다시 입력해주세요.");
             }
         }
     }

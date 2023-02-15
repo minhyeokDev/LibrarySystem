@@ -23,7 +23,7 @@ public class Book {
         return true;
     }
 
-    String BookStatus() { //대여 상태 확인
+    String BookStatus() { //대여 상태 확인 함수
         if (this.isBorrowed == false) {
             return "대여 가능";
         } else {

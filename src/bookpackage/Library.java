@@ -12,7 +12,7 @@ public class Library {
         this.books = books;
     }
 
-    int getNumber(int number) { //책 번호 출력 equals 이용?
+    int getNumber(int number) { //책 번호 출력
         String name = books.get(number).BookName();
         if (name.equals("클린코드(Clean Code)")) {
             return 1;
