@@ -8,7 +8,7 @@ public class Library {
 
     private List<Book> books;
 
-    public Library(List<Book> books) { //생성자
+    public Library(List<Book> books) {
         this.books = books;
     }
 
